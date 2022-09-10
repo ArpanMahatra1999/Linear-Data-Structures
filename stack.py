@@ -1,34 +1,24 @@
-# create stack
-def create_stack():
-    stack = []
-    return stack
+class Stack:
+
+    def __init__(self):
+        self.stack = []
+
+    # Push
+    def push(self, element):
+        self.stack.append(element)
+
+    # Pop
+    def pop(self):
+        if len(self.stack) < 1:
+            return "Stack is empty"
+        return self.stack.pop()
 
 
-# check if stack is empty
-def is_empty(stack):
-    if len(stack) == 0:
-        return True
-    return False
-
-
-# pushing an element into stack
-def push(stack, element):
-    stack.append(element)
-    return stack
-
-
-# popping an element from stack
-def pop(stack):
-    if is_empty(stack):
-        return "Stack is empty"
-    return stack.pop()
-
-
-my_stack = create_stack()
-print(pop(my_stack))
-push(my_stack, 1)
-push(my_stack, 2)
-push(my_stack, 3)
-print(my_stack)
-print(pop(my_stack))
-print(my_stack)
+s = Stack()
+print(s.pop())
+s.push(1)
+s.push(2)
+s.push(3)
+print(s.stack)
+print(s.pop())
+print(s.stack)
