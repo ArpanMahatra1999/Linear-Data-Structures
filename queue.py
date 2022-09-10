@@ -5,7 +5,7 @@ class Queue:
 
     # Enqueue
     def enqueue(self, element):
-        self.queue.append(item)
+        self.queue.append(element)
 
     # Dequeue
     def dequeue(self):
